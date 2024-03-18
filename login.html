@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inica sesion</title>
+    <link rel="icon" href="logitpo1.gif.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="video-background">
+      <!-- Fuentes de video en diferentes formatos -->
+      <source
+        src="Gen-2 3074408124, fondo de loginjpg, M 5.mp4"
+        type="video/mp4"
+      />
+      Tu navegador no admite la etiqueta de video.
+    </video>
+    <div class="box">
+      <div class="container">
+        <div class="top-header">
+          <span>Compras H</span>
+          <header>Iniciar sesión</header>
+          <!-- Corregido el texto de "sesion" a "sesión" -->
+        </div>
+        <form id="login-form">
+          <!-- Agregado el formulario con el ID login-form -->
+          <div class="input-field">
+            <input
+              type="text"
+              class="input"
+              id="username"
+              placeholder="usuario"
+              required
+            />
+            <!-- Agregado el ID "username" -->
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              class="input"
+              id="password"
+              placeholder="contraseña"
+              required
+            />
+            <!-- Agregado el ID "password" -->
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-field">
+            <input type="submit" class="submit" value="Inicio" />
+            <!-- Corregido el nombre de la clase a "submit" -->
+          </div>
+          <div class="button">
+            <div class="left">
+              <input type="checkbox" id="check" />
+              <label for="check">Recordarme</label>
+            </div>
+            <div class="right">
+              <label><a href="#">¿Olvidaste la contraseña?</a></label>
+            </div>
+          </div>
+        </form>
+        <!-- Cerrado el formulario -->
+        <div id="error-message"></div>
+        <!-- Agregado el contenedor para mensajes de error -->
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (username && password) {
+            window.location.href =
+              "https://mart10angel.github.io/COMPRAS-EN-LINEA/";
+          } else {
+            document.getElementById("error-message").innerText =
+              "Por favor ingresa un usuario y contraseña";
+          }
+        });
+    </script>
+  </body>
+</html>
